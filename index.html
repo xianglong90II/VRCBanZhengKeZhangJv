@@ -3,29 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Videos</title>
+    <title>Tutorial Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>My Uploaded Videos</h1>
-
-    <video width="640" height="360" controls>
-        <source src="BZKZAgeVerificationTutorial1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <video width="640" height="360" controls>
-        <source src="BZKZAgeVerificationTutorial2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <video width="640" height="360" controls>
-        <source src="BZKZAgeVerificationTutorial3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <video width="640" height="360" controls>
-        <source src="BZKZAgeVerificationTutorial4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-6 text-center text-2xl font-bold">
+        VRC办证刻章局
+    </header>
+    
+    <!-- Teacher Section -->
+    <section class="max-w-4xl mx-auto mt-8">
+        <h2 class="text-3xl font-semibold text-center mb-6">金牌讲师</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Nym 讲师</h3>
+                <p class="text-gray-600">快速年龄验证办证教程</p>
+                <video class="w-full rounded-lg shadow-lg mt-4" controls>
+                    <source src="BZKZNymFastTutorial.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">HX2 xianglong90讲师</h3>
+                <p class="text-gray-600">办证刻章年龄验证高薪就业系统培训班</p>
+                <div class="grid grid-cols-1 gap-4 mt-4">
+                    <video class="w-full rounded-lg shadow-lg" controls>
+                        <source src="BZKZAgeVerificationTutorial1.mp4" type="video/mp4">
+                    </video>
+                    <video class="w-full rounded-lg shadow-lg" controls>
+                        <source src="BZKZAgeVerificationTutorial2.mp4" type="video/mp4">
+                    </video>
+                    <video class="w-full rounded-lg shadow-lg" controls>
+                        <source src="BZKZAgeVerificationTutorial3.mp4" type="video/mp4">
+                    </video>
+                    <video class="w-full rounded-lg shadow-lg" controls>
+                        <source src="BZKZAgeVerificationTutorial4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4 mt-10">
+        &copy; 2025 VRC办证刻章局. All rights reserved.
+    </footer>
+    
 </body>
 </html>
