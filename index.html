@@ -1,32 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VRC办证刻章局</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+        }
+        .fade {
+            animation: fadeEffect 1.5s;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0.4;} 
+            to {opacity: 1;}
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0;
+            function showSlides() {
+                let slides = document.getElementsByClassName("slide");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1;}
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000);
+            }
+            showSlides();
+        });
+    </script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-red-100 text-gray-900">
     
-    <!-- Header -->
-    <header class="bg-blue-600 text-white p-6 text-center text-2xl font-bold">
-        VRC办证刻章局
+    <!-- 头部 -->
+    <header class="bg-red-600 text-white p-6 text-center text-2xl font-bold relative">
+        <div>VRC办证刻章局 <span class="text-lg font-normal">— 高水平办证培训专家</span></div>
+        <div class="text-sm font-medium mt-2">QQ群号：729918410</div>
     </header>
     
-    <!-- Teacher Section -->
+    <!-- 轮播图 -->
+    <div class="slideshow-container mt-6">
+        <img src="images/school1.jpg" class="slide w-full rounded-lg shadow-lg fade" alt="校园照片1">
+        <img src="images/school2.jpg" class="slide w-full rounded-lg shadow-lg fade" alt="校园照片2">
+        <img src="images/school3.jpg" class="slide w-full rounded-lg shadow-lg fade" alt="校园照片3">
+    </div>
+    
+    <!-- 课程资料下载 -->
+    <section class="max-w-4xl mx-auto mt-6 text-center">
+        <h2 class="text-2xl font-semibold">下载课程资料</h2>
+        <p class="text-lg mt-2">点击下方链接下载讲义：</p>
+        <a href="lecture.pdf" class="text-red-600 font-bold text-xl" download>下载PDF讲义</a>
+    </section>
+    
+    <!-- 讲师部分 -->
     <section class="max-w-4xl mx-auto mt-8">
         <h2 class="text-3xl font-semibold text-center mb-6">金牌讲师</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white p-4 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Nym 讲师</h3>
-                <p class="text-gray-600">快速年龄验证办证教程</p>
+                <img src="images/teacher1.jpg" alt="Nym 讲师" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">Nym 讲师</h3>
+                <p class="text-gray-600 text-center">快速年龄验证办证教程</p>
                 <video class="w-full rounded-lg shadow-lg mt-4" controls>
                     <source src="BZKZNymFastTutorial.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="bg-white p-4 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">HX2 xianglong90讲师</h3>
-                <p class="text-gray-600">办证刻章年龄验证高薪就业系统培训班</p>
+                <img src="images/teacher2.jpg" alt="HX2 xianglong90 讲师" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">HX2 xianglong90 讲师</h3>
+                <p class="text-gray-600 text-center">办证刻章年龄验证高薪就业系统培训班</p>
                 <div class="grid grid-cols-1 gap-4 mt-4">
                     <video class="w-full rounded-lg shadow-lg" controls>
                         <source src="BZKZAgeVerificationTutorial1.mp4" type="video/mp4">
@@ -45,8 +95,8 @@
         </div>
     </section>
     
-    <!-- Footer -->
-    <footer class="bg-blue-600 text-white text-center p-4 mt-10">
+    <!-- 页脚 -->
+    <footer class="bg-red-600 text-white text-center p-4 mt-10">
         &copy; 2025 VRC办证刻章局. All rights reserved.
     </footer>
     
